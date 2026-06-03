@@ -1,18 +1,29 @@
 import "./WeatherCard.css";
+import { type Weather } from "../../types/weather.types";
 
-function WeatherCard() {
+type WeatherCardProps = {
+    weather: Weather;
+}
+
+function WeatherCard({ weather } : WeatherCardProps) {
   return (
-    <div className="weather-card">
-      <div className="weather-icon">
-        🌦️
-      </div>
+    <section className="weather-card">
+        <div className="weather-icon">🌦️</div>
 
-      <h2>Dublin</h2>
+        <h2>{weather.location}</h2>
 
-      <h1>16°C</h1>
+        <p className="weather-condition">
+            {weather.condition}
+        </p>
 
-      <p>Partly Cloudy</p>
-    </div>
+        <h3 className="weather-temperature">
+            {weather.temperature}°C
+        </h3>
+
+        <p>Humidity: {weather.humidity}%</p>
+
+          <p>Wind: {weather.windSpeed} km/h</p>
+    </section>
   );
 }
 
