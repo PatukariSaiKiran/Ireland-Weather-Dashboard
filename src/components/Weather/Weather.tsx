@@ -10,7 +10,7 @@ function WeatherCard({ weather } : WeatherCardProps) {
     <section className="weather-card">
         <div className="weather-icon">🌦️</div>
 
-        <h2>{weather.location}</h2>
+        <h2>📍 {weather.location}</h2>
 
         <p className="weather-condition">
             {weather.condition}
@@ -19,10 +19,6 @@ function WeatherCard({ weather } : WeatherCardProps) {
         <h3 className="weather-temperature">
             {weather.temperature}°C
         </h3>
-
-        <p>Humidity: {weather.humidity}%</p>
-
-          <p>Wind: {weather.windSpeed} km/h</p>
     </section>
   );
 }

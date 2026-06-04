@@ -18,6 +18,11 @@ function SearchBar({ onSearch }: SearchBarProps) {
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            handleSearch();
+          }
+        }}
         placeholder="Enter location or Eircode"
         className="search-input"
       />

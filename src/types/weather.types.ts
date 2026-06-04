@@ -5,3 +5,9 @@ export type Weather = {
     humidity: number;
     windSpeed: number;
   };
+
+  export type ForecastDay = {
+    date: string;
+    maxTemp: number;
+    minTemp: number;
+  };

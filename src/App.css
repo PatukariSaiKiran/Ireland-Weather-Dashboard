@@ -5,5 +5,23 @@
   padding: 0 24px;
 }
 .dashboard-content {
-  padding-top: 24px;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.loading-text {
+  color: #cbd5e1;
+  margin-top: 16px;
+}
+
+.error-text {
+  color: #f87171;
+  margin-top: 16px;
+}
+.weather-layout {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
